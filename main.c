@@ -2,20 +2,20 @@
 
 int main()
 {
-    int producto;
+    int item;
     int opcion;
     float subtotal = 0;
     float descuento = 0;
     float total = 0;
     int cantidad;
     char respuesta;
-    char nombre[50];
+    char Nombre[50];
     char cedula[11];
 
     do
     {
         printf("\n--Menú--\n");
-        printf("1. Facturar producto\n");
+        printf("1. Facturar item\n");
         printf("2. Imprimir factura\n");
         printf("3. Salir\n");
         printf("Ingrese una opción: ");
@@ -24,18 +24,18 @@ int main()
         switch (opcion)
         {
         case 1:
-            producto=0;
+            item = 0;
 
-            printf("\n--Productos--\n");
+            printf("\n--item--\n");
             printf("1. Llantas (Precio: $150)\n");
-            printf("2. Kit Pastillas de freno (Precio: $55)\n");
+            printf("2. Kit Pastill  as de freno (Precio: $55)\n");
             printf("3. Kit de embrague (Precio: $180)\n");
             printf("4. Faro (Precio: $70)\n");
             printf("5. Radiador (Precio: $120)\n");
-            printf("Seleccione un producto: ");
-            scanf("%d", &producto);
+            printf("Seleccione un item: ");
+            scanf("%d", &item);
 
-            switch (producto)
+            switch (item)
             {
             case 1:
                 printf("Ingrese la cantidad de llantas: ");
@@ -79,9 +79,10 @@ int main()
             {
                 printf("\n--Factura--\n");
                 printf("Nombre del comprador: ");
-                scanf("%s", nombre);
+                scanf("%s", Nombre);
                 printf("Número de cédula del comprador: ");
                 scanf("%s", cedula);
+
                 printf("Producto\tCantidad\tPrecio\n");
                 printf("--------------------------------------\n");
                 printf("Llantas\t\t%d\t\t$%.2f\n", (int)(subtotal / 150), (int)(subtotal / 150) * 150.0);
@@ -90,7 +91,6 @@ int main()
                 printf("Faro\t\t%d\t\t$%.2f\n", (int)(subtotal / 70), (int)(subtotal / 70) * 70.0);
                 printf("Radiador\t%d\t\t$%.2f\n", (int)(subtotal / 120), (int)(subtotal / 120) * 120.0);
                 printf("--------------------------------------\n");
-
                 if (subtotal <= 500)
                 {
                     descuento = 0;
@@ -120,10 +120,7 @@ int main()
             getchar(); // para esperar a que el usuario presione una tecla
             break;
         case 3:
-            printf("Saliendo del programa...\n");
-        default:
-            printf("Opción inválida\n");
-            break;
+            printf("Saliendo del programa...Opción inválida\n");
         }
 
     } while (opcion != 3);
