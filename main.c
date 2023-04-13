@@ -115,6 +115,7 @@ int main()
                 printf("Total\t\t\t\t\t$%.2f\n", total);
             }
 
+
             printf("Presione cualquier tecla para continuar...\n");
             getchar(); // para limpiar el buffer del teclado
             getchar(); // para esperar a que el usuario presione una tecla
